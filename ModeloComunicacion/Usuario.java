@@ -6,75 +6,46 @@ package ModeloComunicacion;
 
 /**
  *
- * @author diego
+ * @author diego - mod Santiago
  */
 public class Usuario {
-    private String Ingresarpagina;
-    private String SeleccionarIngresarsesion;
-    private String IngresarCredenciales;
-    private String PrecionaIniciarsesion;
-    private String ValidarCredenciales;
-    private String EntraralSistema;
-
+    private int IDusuario;
+    private String nombre;
+    private String email;
+    private int contraseña;
+    
     public Usuario() {
     }
 
-    public Usuario(String Ingresarpagina, String SeleccionarIngresarsesion, String IngresarCredenciales, String PrecionaIniciarsesion, String ValidarCredenciales, String EntraralSistema) {
-        this.Ingresarpagina = Ingresarpagina;
-        this.SeleccionarIngresarsesion = SeleccionarIngresarsesion;
-        this.IngresarCredenciales = IngresarCredenciales;
-        this.PrecionaIniciarsesion = PrecionaIniciarsesion;
-        this.ValidarCredenciales = ValidarCredenciales;
-        this.EntraralSistema = EntraralSistema;
-    }
-
-    public String getIngresarpagina() {
-        return Ingresarpagina;
-    }
-
-    public void setIngresarpagina(String Ingresarpagina) {
-        this.Ingresarpagina = Ingresarpagina;
-    }
-
-    public String getSeleccionarIngresarsesion() {
-        return SeleccionarIngresarsesion;
-    }
-
-    public void setSeleccionarIngresarsesion(String SeleccionarIngresarsesion) {
-        this.SeleccionarIngresarsesion = SeleccionarIngresarsesion;
-    }
-
-    public String getIngresarCredenciales() {
-        return IngresarCredenciales;
-    }
-
-    public void setIngresarCredenciales(String IngresarCredenciales) {
-        this.IngresarCredenciales = IngresarCredenciales;
-    }
-
-    public String getPrecionaIniciarsesion() {
-        return PrecionaIniciarsesion;
-    }
-
-    public void setPrecionaIniciarsesion(String PrecionaIniciarsesion) {
-        this.PrecionaIniciarsesion = PrecionaIniciarsesion;
-    }
-
-    public String getValidarCredenciales() {
-        return ValidarCredenciales;
-    }
-
-    public void setValidarCredenciales(String ValidarCredenciales) {
-        this.ValidarCredenciales = ValidarCredenciales;
-    }
-
-    public String getEntraralSistema() {
-        return EntraralSistema;
-    }
-
-    public void setEntraralSistema(String EntraralSistema) {
-        this.EntraralSistema = EntraralSistema;
+    public Usuario(int IDusuario, String nombre, String email, int contraseña) {
+        this.IDusuario = IDusuario;
+        this.nombre = nombre;
+        this.email = email;
+        this.contraseña = contraseña;
     }
     
+    public boolean Validarcredenciales(int contraseñaIngresada) {
+        return this.contraseña == contraseñaIngresada;
+    }
+
+    public int getIDusuario() {
+        return IDusuario;
+    }
+
+    public void setIDusuario(int IDusuario) {
+        this.IDusuario = IDusuario;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String Nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getEmail() {
+        return email;
+    }
     
 }
