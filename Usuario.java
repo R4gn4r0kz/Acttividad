@@ -2,30 +2,30 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Modelo;
+package ModeloComunicacion;
 
 /**
  *
- * @author diego
+ * @author diego - mod Santiago
  */
 public class Usuario {
     private int IDusuario;
-    private String Nombre;
-    private String Email;
-    private int Contraseña;
-    private String IniciarSesion;
-    private String CerrarSesion;
-
+    private String nombre;
+    private String email;
+    private int contraseña;
+    
     public Usuario() {
     }
 
-    public Usuario(int IDusuario, String Nombre, String Email, int Contraseña, String IniciarSesion, String CerrarSesion) {
+    public Usuario(int IDusuario, String nombre, String email, int contraseña) {
         this.IDusuario = IDusuario;
-        this.Nombre = Nombre;
-        this.Email = Email;
-        this.Contraseña = Contraseña;
-        this.IniciarSesion = IniciarSesion;
-        this.CerrarSesion = CerrarSesion;
+        this.nombre = nombre;
+        this.email = email;
+        this.contraseña = contraseña;
+    }
+    
+    public boolean Validarcredenciales(int contraseñaIngresada) {
+        return this.contraseña == contraseñaIngresada;
     }
 
     public int getIDusuario() {
@@ -37,45 +37,15 @@ public class Usuario {
     }
 
     public String getNombre() {
-        return Nombre;
+        return nombre;
     }
 
     public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
+        this.nombre = nombre;
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
-
-    public void setEmail(String Email) {
-        this.Email = Email;
-    }
-
-    public int getContraseña() {
-        return Contraseña;
-    }
-
-    public void setContraseña(int Contraseña) {
-        this.Contraseña = Contraseña;
-    }
-
-    public String getIniciarSesion() {
-        return IniciarSesion;
-    }
-
-    public void setIniciarSesion(String IniciarSesion) {
-        this.IniciarSesion = IniciarSesion;
-    }
-
-    public String getCerrarSesion() {
-        return CerrarSesion;
-    }
-
-    public void setCerrarSesion(String CerrarSesion) {
-        this.CerrarSesion = CerrarSesion;
-    }
-   
-    
     
 }
