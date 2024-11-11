@@ -38,7 +38,7 @@ public class ProcesoSecuencia {
         System.out.println("Producto agregado al carrito: " + producto.getNombre() + ", cantidad: " + cantidad);        
     }
     
-    public void ingresarDirección(String direccion) {
+    public void ingresarDireccion(String direccion) {
         pedido.setDireccion(direccion);
         System.out.println("Dirección de entrega: " + direccion);        
     }
