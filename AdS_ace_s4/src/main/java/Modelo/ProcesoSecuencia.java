@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Modelo;
-
+import ModeloComunicacion.*;
 /**
  *
  * @author santi
@@ -13,8 +13,8 @@ public class ProcesoSecuencia {
     private Carrito carrito;
     private Pedido pedido;
     
-    public ProcesoSecuencia() {
-        this.carrito = new Carrito();
+    public ProcesoSecuencia(int IDcliente) {
+        this.carrito = new Carrito(IDcliente);
         this.pedido = new Pedido();
     }
     
@@ -32,7 +32,7 @@ public class ProcesoSecuencia {
         System.out.println("producto encontrado: " + producto.getNombre());
     }
     
-    public void agregarProductoAlCarito(int idProducto, String nombre, int precio, int stock) {
+    public void agregarProductoAlCarito(int idProducto, String nombre, int precio, int stock, int cantidad) {
         Producto producto = new Producto (idProducto, nombre, precio, stock, 0, 0);
         carrito.agregarProducto(producto, cantidad);
         System.out.println("Producto agregado al carrito: " + producto.getNombre() + ", cantidad: " + cantidad);        
